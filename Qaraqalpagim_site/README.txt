@@ -1,0 +1,1 @@
+Qaraqalpagim website — minimal restaurant site using the supplied logo and original menu-page photos. The menu is a functional page viewer with thumbnails, previous/next controls and full-screen zoom. Also includes responsive layout, navigation and table reservation form. Open index.html in a browser.
