@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Qaraqalpagim — ресторан в Нукусе</title>
+  <meta name="description" content="Qaraqalpagim — блюда каракалпакской, восточной и домашней кухни. Меню, доставка и бронь стола.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <button class="icon-btn mobile-only" id="menuBtn" aria-label="Меню">☰</button>
+  <a href="#top" class="brand">
+    <span class="brand-mark">Q</span>
+    <span><b>Qaraqalpagim</b><small>РЕСТОРАН · NUKUS</small></span>
+  </a>
+  <nav class="desktop-nav">
+    <a href="#menu">Меню</a><a href="#story">О нас</a><a href="#service">Сервис</a><a href="#contacts">Контакты</a>
+  </nav>
+  <div class="top-actions">
+    <button class="ghost-btn" id="reserveBtn">Забронировать</button>
+    <button class="dark-btn" id="headerDeliveryBtn">Доставка <b id="cartCount">0</b></button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-copy">
+      <span class="eyebrow">КАРАКАЛПАКСКАЯ · ВОСТОЧНАЯ · ДОМАШНЯЯ</span>
+      <h1>Вкус, который<br><em>остаётся</em> с вами.</h1>
+      <p>Qaraqalpagim — спокойное место для семейных ужинов, тёплых встреч и блюд, приготовленных без спешки.</p>
+      <div class="hero-actions">
+        <a class="dark-btn big" href="#menu">Открыть меню</a>
+        <button class="light-btn big" id="heroReserveBtn">Забронировать стол</button>
+      </div>
+      <div class="hero-meta"><span>Ежедневно</span><span>•</span><span>Принимаем бронь</span><span>•</span><span>Доставка по городу</span></div>
+    </div>
+    <div class="hero-art">
+      <div class="art-top">QARAQALPAGIM</div>
+      <div class="art-circle"><img src="assets/logo.jpg" alt="Логотип Qaraqalpagim"></div>
+      <div class="art-bottom">ДОМ · ВКУС · ГОСТЕПРИИМСТВО</div>
+    </div>
+  </section>
+
+  <section id="menu" class="section menu-section">
+    <div class="section-head">
+      <div><span class="eyebrow">МЕНЮ</span><h2>Соберите свой стол</h2></div>
+      <div class="menu-tools"><div class="search-wrap"><span>⌕</span><input id="search" placeholder="Поиск блюда…" aria-label="Поиск блюда"></div><button class="light-btn" id="clearFilters">Сбросить</button></div>
+    </div>
+    <div class="filter-row" id="cats"></div>
+    <div class="menu-count"><span id="resultCount">0 блюд</span><span>Цены указаны в сумах</span></div>
+    <div id="grid" class="menu-grid"></div>
+  </section>
+
+  <section id="story" class="split-section">
+    <div class="split-title"><span class="eyebrow">QARAQALPAGIM</span><h2>Место, где<br>не торопятся.</h2></div>
+    <div class="split-copy"><p>Мы оставили на первом месте вкус и атмосферу. Меню объединяет блюда родной кухни, любимую классику и позиции для большой компании.</p><div class="quote">«Соберитесь за одним столом — остальное мы сделаем.»</div></div>
+  </section>
+
+  <section id="service" class="service-section">
+    <div class="service-head"><span class="eyebrow">СЕРВИС</span><h2>Всё нужное — в одном месте</h2></div>
+    <div class="service-grid">
+      <button class="service-card" id="serviceDelivery"><span class="service-number">01</span><b>Доставка</b><small>Адрес, телефон и комментарий — прямо на сайте.</small><span class="service-link">Заказать →</span></button>
+      <button class="service-card" id="serviceReserve"><span class="service-number">02</span><b>Бронь стола</b><small>Выберите дату, время и количество гостей.</small><span class="service-link">Забронировать →</span></button>
+      <button class="service-card" id="serviceCart"><span class="service-number">03</span><b>Корзина</b><small>Меняйте количество и сразу видите итоговую сумму.</small><span class="service-link">Открыть →</span></button>
+    </div>
+  </section>
+
+  <section id="contacts" class="contact-section">
+    <div><span class="eyebrow">КОНТАКТЫ</span><h2>Qaraqalpagim</h2><p>Нукуc · Республика Каракалпакстан</p></div>
+    <div class="contact-list"><a href="tel:+998900000000">+998 (90) 000-00-00</a><span>Ежедневно · 10:00–23:00</span><span>Бронь и доставка через сайт</span></div>
+  </section>
+</main>
+
+<footer><div class="footer-brand"><span class="brand-mark">Q</span><b>Qaraqalpagim</b></div><span>© 2026 Qaraqalpagim</span></footer>
+
+<aside class="drawer" id="drawer"><div class="drawer-box"><button class="close" data-close>×</button><div class="drawer-brand">Qaraqalpagim</div><a href="#menu" data-close>Меню</a><a href="#story" data-close>О нас</a><a href="#service" data-close>Сервис</a><a href="#contacts" data-close>Контакты</a><button class="dark-btn" id="drawerDelivery">Доставка</button><button class="light-btn" id="drawerReserve">Забронировать</button></div></aside>
+
+<div class="modal" id="productModal"><div class="modal-box product-modal"><button class="close" data-close>×</button><span class="eyebrow" id="pCat"></span><h3 id="pName"></h3><p id="pDesc"></p><div class="modal-price" id="pPrice"></div><div class="modal-actions"><button class="dark-btn" id="pAdd">Добавить в корзину</button><button class="light-btn" data-close>Закрыть</button></div></div></div>
+
+<div class="modal" id="deliveryModal"><div class="modal-box form-modal"><button class="close" data-close>×</button><span class="eyebrow">ДОСТАВКА</span><h3>Куда привезти заказ?</h3><p class="muted">Заполните данные — они сохранятся на этом устройстве.</p><div class="form-grid"><label>Имя<input id="dName" placeholder="Ваше имя"></label><label>Телефон<input id="dPhone" type="tel" placeholder="+998 …"></label><label class="full-field">Адрес<input id="dAddress" placeholder="Улица, дом, квартира"></label><label class="full-field">Комментарий<textarea id="dComment" rows="3" placeholder="Подъезд, этаж, пожелания"></textarea></label></div><div class="form-summary" id="deliverySummary"></div><button class="dark-btn full" id="saveDelivery">Подтвердить доставку</button></div></div>
+
+<div class="modal" id="reserveModal"><div class="modal-box form-modal"><button class="close" data-close>×</button><span class="eyebrow">БРОНЬ СТОЛА</span><h3>Забронировать стол</h3><p class="muted">Укажите количество гостей и номер телефона — администратор сможет связаться с вами.</p><div class="form-grid"><label>Имя<input id="rName" placeholder="Ваше имя"></label><label>Телефон<input id="rPhone" type="tel" placeholder="+998 …"></label><label>Гостей<select id="rGuests"><option value="1">1 гость</option><option value="2">2 гостя</option><option value="3">3 гостя</option><option value="4">4 гостя</option><option value="5">5 гостей</option><option value="6">6 гостей</option><option value="7">7 гостей</option><option value="8">8 гостей</option><option value="9">9 гостей</option><option value="10">10 гостей</option><option value="11">11 гостей</option><option value="12">12 гостей</option></select></label><label>Дата<input id="rDate" type="date"></label><label>Время<select id="rTime"></select></label><label class="full-field">Комментарий<textarea id="rComment" rows="3" placeholder="Например: нужен детский стул"></textarea></label></div><button class="dark-btn full" id="saveReservation">Подтвердить бронь</button></div></div>
+
+<aside class="cart-panel" id="cartPanel"><div class="cart-head"><div><span class="eyebrow">ВАШ ЗАКАЗ</span><h3>Корзина</h3></div><button class="close cart-close" id="closeCart">×</button></div><div id="cartItems"></div><div class="cart-foot"><div><span>Товаров</span><b id="cartItemsCount">0</b></div><div class="cart-total"><span>Итого</span><b id="sum">0 сум</b></div><button class="dark-btn full" id="checkout">Оформить доставку</button><button class="light-btn full" id="clearCart">Очистить корзину</button></div></aside>
+
+<div class="toast" id="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
